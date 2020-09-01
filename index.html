@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <h1>Hello World.</h1>
+
+    <script type="text/javascript">
+      console.log("hello world");
+      //array of strings
+      var availablePizzas = ["Pepperoni", "Cheese", "Hawaiian", "Veggie"];
+      var userPizza = prompt("What kind of pizza would you like?");
+      console.log(userPizza);
+
+      // // compare the users answer against our array.
+      // if (userPizza === availablePizzas[0]){
+      //     alert("Sure we've got " + userPizza + " in stock!");
+      // } else if (userPizza === availablePizzas[1]){
+      //     alert("Sure we've got " + userPizza + " in stock!");
+      // } else if (userPizza === availablePizzas[2]){
+      //     alert("Sure we've got " + userPizza + " in stock!");
+      // } else if (userPizza === availablePizzas[3]){
+      //     alert("Sure we've got " + userPizza + " in stock!");
+      // } else {
+      //     alert("Sorry! We don't have " + userPizza + " in stock!")
+      // }
+
+      // For lop searching for match
+      var foundMatch = false;
+
+      for (var i = 0; i < availablePizzas.length; i++) {
+        if (userPizza.toLowerCase() === availablePizzas[i].toLowerCase()) {
+          alert("Sure! We've got " + userPizza + " in stock!");
+          foundMatch = true;
+          break;
+        }
+      }
+      if (!foundMatch) {
+        alert("Sorry! We don't have " + userPizza + " in stock!");
+      }
+    </script>
+  </body>
+</html>
